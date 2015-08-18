@@ -14,7 +14,7 @@ Note that you have to change the js file to catch your own classes.
 
 In the second example (in this file "addFields-using-Mustache-lib.html" that import this js file "addField-Mustache.js") I show you how to use Mustache.js to solve the problem of adding multiple fields in a form dinamically.
 
-One you have done the JS, you don't have to touch it anymore. If something is changing on the layout you have only to change the template that is in the HTML file.
+Once you have done the JS, you don't have to touch it anymore. If something is changing on the layout you have only to change the template that is in the HTML file.
 
 ## Third example
 
