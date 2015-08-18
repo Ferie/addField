@@ -52,4 +52,6 @@ but don't forget to include somethig like that:
 
 ---------
 
+##NOTE##
+
 Mustache.js is a very useful library that implements the mustache template system in JavaScript. Follow [the owner GitHub link for further details](https://github.com/janl/mustache.js/)
