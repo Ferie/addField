@@ -44,12 +44,6 @@ and you can delete the script with the template in the HTML file
 </script>
 ```
 
-but don't forget to include somethig like that:
-
-```
-
-```
-
 ---------
 
 ##NOTE##
