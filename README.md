@@ -1,34 +1,40 @@
-# addField is a jQuery plugin that add multiple fields
+# addField is a jQuery plugin that adds multiple fields in a form
 
-Facing the problem of adding multiple filds dinamically in a form if requested by the specs, I have created this plugin.
+Facing the **problem of adding multiple fields dinamically in a form** for those who have to enter multiple informations, I have created this plugin.
 
-In this repo you can find 3 example because I have used Mustache.js library to help myself creating a template of the fileds that I needed.
+In this repo you can find 3 examples: *the first one* is the very simple solution that uses only jQuery; *the second one* is only to show how [Mustache.js](https://github.com/janl/mustache.js/) could help; *the third one* is the solution that uses the plugin I have developed with and without using Mustache.js.
 
 ## First example
 
-In the first example (in this file "addFields-using-only-jquery.html") I used jQuery in the document ready for who want a simple solution of this problem (the js file is "addField.js").
+In the first example (this file "addFields-using-only-jquery.html") I used only jQuery when the document is ready.
 
-Note that you have to change the js file to catch your own classes.
+The event click is catched on the "Add field" link then  a remove one is created that removes just this field (or this row of fields).
+
+This is the **very simple solution for those who do not want to spend too many time** facing this problem (the js file that has to be imported is "addField.js").
 
 ## Second example
 
-In the second example (in this file "addFields-using-Mustache-lib.html" that import this js file "addField-Mustache.js") I show you how to use Mustache.js to solve the problem of adding multiple fields in a form dinamically.
+In the second example (file "addFields-using-Mustache-lib.html", that imports js file "addField-Mustache.js") I just show how to use [Mustache.js](https://github.com/janl/mustache.js/) to solve the problem of adding multiple fields in a form dinamically.
 
-Once you have done the JS, you don't have to touch it anymore. If something is changing on the layout you have only to change the template that is in the HTML file.
+Once you have modified the JS with your own classes, you won't have to touch it anymore. If something is changed on the layout, the only things to change will be in the template that is inside the HTML file.
 
 ## Third example
 
-In the third example ("addFields-using-plugin-jquery.addField-and-Mustache-lib" that uses the js file "jquery.addField.js") there is the plugin in action.
+In the third example there is the plugin **jquery.addField.js** in action.
 
-To work with it simply apply it to the form where there will be the multiple fields and create a container for the "Add" button (or link).
+To work with it, simply **apply it to the form** where there is the multiple fields and create a container for the "Add field" button (or link).
 
-The "Remove" button is placed inside the templete even in the previous examples, because for each of them is created an unique event that remove only one specified filed (or a row of fields).
+The "Remove" button is placed inside the templete like the previous examples, because for each of them is created an unique event that removes only one specified filed (or a row of fields).
 
-I leave both the solutions seen before with or without the Mustache.js:
+```
+$('#addFieldForm').addField();
+```
 
-* If you want to use both Mustache.js and the plugin simple leave it how is it now
+Inside the plugin you can find both the solutions seen before (with or without using [Mustache.js](https://github.com/janl/mustache.js/)):
 
-* If you want to use only the plugin you have to uncomment all the append function on the wrapper in the plugin file
+* If you want to use Mustache.js and the plugin, simply leave it how is it now (you can delete the commented part on the js file)
+
+* If you want to use only the plugin without the Mustache.js library, you have to delete the Mustache instructions. To do this, uncomment all the jquery append function applied to the wrapper in the js file
 
 ```
 $wrapper.append({
@@ -36,7 +42,7 @@ $wrapper.append({
 });
 ```
 
-and you can delete the script with the template in the HTML file
+and delete the script with the Mustache template in the HTML file
 
 ```
 <script id="addFieldTemplate" type="x-tmpl-mustache">
@@ -48,4 +54,4 @@ and you can delete the script with the template in the HTML file
 
 ##NOTE##
 
-Mustache.js is a very useful library that implements the mustache template system in JavaScript. Follow [the owner GitHub link for further details](https://github.com/janl/mustache.js/)
+Mustache.js is a very useful library that implements the mustache template system in JavaScript. Follow [the official GitHub link for further details](https://github.com/janl/mustache.js/)
