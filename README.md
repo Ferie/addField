@@ -32,11 +32,15 @@ To work with it, simply **apply it to the form** where there is the multiple fie
 $('#addFieldForm').addField();
 ```
 
+You can also customize some important attributes
+
+
+
 Inside the plugin you can find both the solutions seen before (with or without using [Mustache.js](https://github.com/janl/mustache.js/)):
 
-* If you want to use Mustache.js and the plugin, simply leave it how is it now (you can delete the commented part on the js file)
+* If you want to use Mustache.js and the plugin, simply leave it how is it now (you can delete the commented part on the js plugin file)
 
-* If you want to use only the plugin without the Mustache.js library, you have to delete the Mustache instructions. To do this, uncomment all the jquery append function applied to the wrapper in the js file
+* If you want to use only the plugin without the Mustache.js library, you have to delete the Mustache instructions in the js file, uncomment all the template that is in the jquery *append* function applied to the ```$wrapper```
 
 ```
 $wrapper.append({
