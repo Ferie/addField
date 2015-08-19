@@ -12,19 +12,21 @@ The event click is catched on the "Add field" link then  a remove one is created
 
 This is the **very simple solution for those who do not want to spend too many time** facing this problem (the js file that has to be imported is "addField.js").
 
+[See it in action](http://riccardoandreatta.com/web-app/addField/addFields-using-only-jquery.html)
+
 ## Second example
 
 In the second example (file "addFields-using-Mustache-lib.html", that imports js file "addField-Mustache.js") I just show how to use [Mustache.js](https://github.com/janl/mustache.js/) to solve the problem of adding multiple fields in a form dinamically.
 
 Once you have modified the JS with your own classes, you won't have to touch it anymore. If something is changed on the layout, the only things to change will be in the template that is inside the HTML file.
 
+[See it in action](http://riccardoandreatta.com/web-app/addField/addFields-using-Mustache-lib.html)
+
 ## Third example
 
 In the third example there is the plugin **jquery.addField.js** in action.
 
 To work with it, simply **apply it to the form** where there is the multiple fields and create a container for the "Add field" button (or link).
-
-The "Remove" button is placed inside the templete like the previous examples, because for each of them is created an unique event that removes only one specified filed (or a row of fields).
 
 ```
 $('#addFieldForm').addField();
@@ -50,8 +52,36 @@ and delete the script with the Mustache template in the HTML file
 </script>
 ```
 
+[See it in action](http://riccardoandreatta.com/web-app/addField/addFields-using-plugin-jquery.addField-and-Mustache-lib.html)
+
+#### VERY IMPORTANT NOTES
+
+##### The *Remove button*
+
+The "*Remove button*" is placed inside the templates in every examples shown before because for each new field (or row of fields) that is created, an unique event is also associated to each new remove button (or link, as you wish).
+
+To make it works properly, the *Remove button container* must have the ```data-*prefix*-field-remove``` (in the template that is in the HTML) that is something like this using Mustache.js:
+
+```
+<a class="removeField link" data-{{prefix}}-field-remove="{{counter}}">
+	...
+</a>
+```
+
+or something like this, if you are using only jQuery (remember that, in this case, the template is inside the *append* function applied to the ```$wrapper```):
+
+```
+<a class="removeField link" data-' + prefix + '-field-remove="' + counter + '">\
+	...
+</a>\
+```
+
+##### The *Wrapper*
+
+The template has to include also another data attribute for the wrapper that must have the ```data-*prefix*-field-count``` that defines the exact portion of code that has to be removed when the *Remove button* is clicked
+
 ---------
 
-##NOTE##
+##About Mustache.js##
 
 Mustache.js is a very useful library that implements the mustache template system in JavaScript. Follow [the official GitHub link for further details](https://github.com/janl/mustache.js/)
