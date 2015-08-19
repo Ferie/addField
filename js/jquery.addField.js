@@ -4,7 +4,29 @@
 
 	var pluginName = 'addField',
 		defaults = {
-			addFieldLinkClass: '.addField'
+			addFieldContainerClass: 'addFieldContainer',
+			addFieldClass: 'addField',
+			generalMultipleFieldsContainerParentsClass: 'generalMultipleFieldsContainer',
+			firstMultipleFieldsContainerParentsClass: 'firstMultipleFieldsContainer',
+			firstWrapperClass: 'firstWrapper',
+			firstPrefix: 'firstPrefix',
+			secondMultipleFieldsContainerParentsClass: null,
+			secondWrapperClass: null,
+			secondPrefix: null,
+			thirdMultipleFieldsContainerParentsClass: null,
+			thirdWrapperClass: null,
+			thirdPrefix: null,
+			fourthMultipleFieldsContainerParentsClass: null,
+			fourthWrapperClass: null,
+			fourthPrefix: null,
+			fifthMultipleFieldsContainerParentsClass: null,
+			fifthWrapperClass: null,
+			fifthPrefix: null,
+			sixthMultipleFieldsContainerParentsClass: null,
+			sixthWrapperClass: null,
+			sixthPrefix: null,
+			mustacheTemplateId: 'addFieldTemplate',
+			maxFieldsNumber: 10
 		};
 
 	//constructor
@@ -13,7 +35,7 @@
 		this.$elem = $(element);
 		this.options = $.extend({}, defaults, options);
 
-		this.$addField = this.$elem.find(this.options.addFieldLinkClass);
+		this.$addField = this.$elem.find('.' + this.options.addFieldClass);
 		this.elecInputCount = 1;
 		this.gasInputCount = 1;
 
@@ -28,22 +50,22 @@
 		addField: function (event) {
 			var pluginThis = event.data.pluginThis,
 				$this = $(this),
-				$thisParents = $this.parents('.energyFieldsContainer'),
-				max_fields = 10,
+				$thisParents = $this.parents('.' + pluginThis.options.generalMultipleFieldsContainerParentsClass),
+				max_fields = pluginThis.options.maxFieldsNumber,
 				counter = 0,
 				prefix,
 				$wrapper;
 
 			event.preventDefault();
 
-			if ($thisParents.hasClass('elec-usage-amount')) {
-				$wrapper = $thisParents.find('.electricityMeter');
-				prefix = 'elec';
+			if ($thisParents.hasClass(pluginThis.options.firstMultipleFieldsContainerParentsClass)) {
+				$wrapper = $thisParents.find('.' + pluginThis.options.firstWrapperClass);
+				prefix = pluginThis.options.firstPrefix;
 				pluginThis.elecInputCount = pluginThis.elecInputCount + 1;
 				counter = pluginThis.elecInputCount;
-			} else if ($thisParents.hasClass('gas-usage-amount')) {
-				$wrapper = $thisParents.find('.gasMeter');
-				prefix = 'gas';
+			} else if ($thisParents.hasClass(pluginThis.options.secondMultipleFieldsContainerParentsClass)) {
+				$wrapper = $thisParents.find('.' + pluginThis.options.secondWrapperClass);
+				prefix = pluginThis.options.secondPrefix;
 				pluginThis.gasInputCount = pluginThis.gasInputCount + 1;
 				counter = pluginThis.gasInputCount;
 			}
@@ -71,7 +93,7 @@
 					prefix: prefix
 				};
 
-				var output = Mustache.render($('#addFieldTemplate').html(), view);
+				var output = Mustache.render($('#' + pluginThis.options.mustacheTemplateId).html(), view);
 
 				$wrapper.append(output);
 				/* End Mustache.js template rendering */
@@ -79,7 +101,7 @@
 				$wrapper.find('[data-' + prefix + '-field-remove="' + (counter-1) + '"]').addClass('is-hidden');
 
 				if (counter == max_fields) {
-					$wrapper.siblings('.addFieldContainer').addClass('is-hidden');
+					$wrapper.siblings('.' + pluginThis.options.addFieldContainerClass).addClass('is-hidden');
 				}
 			}
 
@@ -90,16 +112,16 @@
 				e.stopPropagation();
 				$this.parent().remove();
 
-				if (prefix == 'elec') {
+				if (prefix == pluginThis.options.firstPrefix) {
 					pluginThis.elecInputCount = pluginThis.elecInputCount - 1;
 					counter = pluginThis.elecInputCount;
-				} else if (prefix == 'gas') {
+				} else if (prefix == pluginThis.options.secondPrefix) {
 					pluginThis.gasInputCount = pluginThis.gasInputCount - 1;
 					counter = pluginThis.gasInputCount;
 				}
 
 				$wrapper.find('[data-' + prefix + '-field-remove="' + counter + '"]').removeClass('is-hidden');
-				$wrapper.siblings('.addFieldContainer').removeClass('is-hidden');
+				$wrapper.siblings('.' + pluginThis.options.addFieldContainerClass).removeClass('is-hidden');
 			});
 		},
 		eventBindings: function () {

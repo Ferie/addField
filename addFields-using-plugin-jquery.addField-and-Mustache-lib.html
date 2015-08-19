@@ -97,7 +97,18 @@
 		</div>
 
 		<script>
-			$('#addFieldForm').addField();
+			$('#addFieldForm').addField({
+				addFieldContainerClass: 'addFieldContainer',
+				addFieldClass: 'addField',
+				generalMultipleFieldsContainerParentsClass: 'energyFieldsContainer',
+				firstMultipleFieldsContainerParentsClass: 'elec-usage-amount',
+				firstWrapperClass: 'electricityMeter',
+				firstPrefix: 'elec',
+				secondMultipleFieldsContainerParentsClass: 'gas-usage-amount',
+				secondWrapperClass: 'gasMeter',
+				secondPrefix: 'gas',
+				mustacheTemplateId: 'addFieldTemplate'
+			});
 		</script>
 	</body>
 </html>
