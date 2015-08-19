@@ -1,99 +1,99 @@
 <html>
-	<head>
+    <head>
         <title>jQuery addField Plugin</title>
 
-		<link rel="stylesheet" type="text/css" href="css/css.css">
+        <link rel="stylesheet" type="text/css" href="css/css.css">
 
-		<script src="js/lib/jquery-1.11.3.min.js"></script>
-		<script src="js/lib/mustache.min.js"></script>
-		<script src="js/addField-Mustache.js"></script>
-	</head>
+        <script src="js/lib/jquery-1.11.3.min.js"></script>
+        <script src="js/lib/mustache.min.js"></script>
+        <script src="js/addField-Mustache.js"></script>
+    </head>
 
-	<body>
-		<div class="siteContainer">
-			<div class="siteWrapper">
-				<form id="addFieldForm">
-					<div class="formWrap">
-						<section class="formPart energyUsage">
-							<fieldset class="formFieldset">
-								<legend class="formLegend">
-									<span class="sectionHeadingCounter">1</span>
-									<span class="sectionHeading heading4">Energy usage</span>
-									<span class="toolTipIndicator">?</span>
-								</legend>
-								<div class="toolTipWrapper is-hidden">
-									<div class="toolTipContainer">
-										<p class="toolTipDescription">In this example you can see how jQuery can add multiple fields in a form. In this special example the Mustache.js library is used. See the Readme for further details.</p>
-									</div>
-								</div>
-								<label class="formLabel">What type of quote is your company looking for?</label>
-								<ul class="formFields elec-usage-amount energyFieldsContainer spacing clearfix">
-									<li class="heading4">I know how much electricity my company uses</li>
-									<li class="electricityMeter clearfix">
-										<div class="meterReadingFields">
-											<div class="meterReadingField">
-												<label for="eleckWh-1" class="formLabel">kWhs</label>
-												<input id="eleckWh-1" name="eleckWh-1" type="text" class="formField" data-elec-input-count="1">
-											</div>
-											<div class="meterReadingOccurrence">
-												<label for="elecUseDuration" class="formLabel">Per</label>
-												<input name="elecPerYear" type="text" class="formField" value="Per Year" disabled="disabled">
-											</div>
-										</div>
-									</li>
-									<li class="addFieldContainer">
-										<a class="addField link">
-											<span class="gbe-icon-add"></span>
-											Add another meter reading
-										</a>
-									</li>
-								</ul>
-								<ul class="formFields gas-usage-amount energyFieldsContainer spacing clearfix">
-									<li class="heading4">I know how much gas my company uses</li>
-									<li class="gasMeter clearfix">
-										<div class="meterReadingFields">
-											<div class="meterReadingField">
-												<label for="gaskWh-1" class="formLabel">kWhs</label>
-												<input id="gaskWh-1" name="gaskWh-1" type="text" class="formField" data-gas-input-count="1">
-											</div>
-											<div class="meterReadingOccurrence">
-												<label for="gasUseDuration" class="formLabel">Per</label>
-												<input name="gasPerYear" type="text" class="formField" value="Per Year" disabled="disabled">
-											</div>
-										</div>
-									</li>
-									<li class="addFieldContainer">
-										<a class="addField link">
-											<span class="gbe-icon-add"></span>
-											Add another meter reading
-										</a>
-									</li>
-								</ul>
-							</fieldset>
-						</section>
+    <body>
+        <div class="siteContainer">
+            <div class="siteWrapper">
+                <form id="addFieldForm">
+                    <div class="formWrap">
+                        <section class="formPart energyUsage">
+                            <fieldset class="formFieldset">
+                                <legend class="formLegend">
+                                    <span class="sectionHeadingCounter">1</span>
+                                    <span class="sectionHeading heading4">Energy usage</span>
+                                    <span class="toolTipIndicator">?</span>
+                                </legend>
+                                <div class="toolTipWrapper is-hidden">
+                                    <div class="toolTipContainer">
+                                        <p class="toolTipDescription">In this example you can see how jQuery can add multiple fields in a form. In this special example the Mustache.js library is used. See the Readme for further details.</p>
+                                    </div>
+                                </div>
+                                <label class="formLabel">What type of quote is your company looking for?</label>
+                                <ul class="formFields elec-usage-amount energyFieldsContainer spacing clearfix">
+                                    <li class="heading4">I know how much electricity my company uses</li>
+                                    <li class="electricityMeter clearfix">
+                                        <div class="meterReadingFields">
+                                            <div class="meterReadingField">
+                                                <label for="eleckWh-1" class="formLabel">kWhs</label>
+                                                <input id="eleckWh-1" name="eleckWh-1" type="text" class="formField" data-elec-input-count="1">
+                                            </div>
+                                            <div class="meterReadingOccurrence">
+                                                <label for="elecUseDuration" class="formLabel">Per</label>
+                                                <input name="elecPerYear" type="text" class="formField" value="Per Year" disabled="disabled">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="addFieldContainer">
+                                        <a class="addField link">
+                                            <span class="gbe-icon-add"></span>
+                                            Add another meter reading
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="formFields gas-usage-amount energyFieldsContainer spacing clearfix">
+                                    <li class="heading4">I know how much gas my company uses</li>
+                                    <li class="gasMeter clearfix">
+                                        <div class="meterReadingFields">
+                                            <div class="meterReadingField">
+                                                <label for="gaskWh-1" class="formLabel">kWhs</label>
+                                                <input id="gaskWh-1" name="gaskWh-1" type="text" class="formField" data-gas-input-count="1">
+                                            </div>
+                                            <div class="meterReadingOccurrence">
+                                                <label for="gasUseDuration" class="formLabel">Per</label>
+                                                <input name="gasPerYear" type="text" class="formField" value="Per Year" disabled="disabled">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="addFieldContainer">
+                                        <a class="addField link">
+                                            <span class="gbe-icon-add"></span>
+                                            Add another meter reading
+                                        </a>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </section>
 
-						<script id="addFieldTemplate" type="x-tmpl-mustache">
-							<div class="meterReadingFields" data-{{prefix}}-input-count="{{counter}}">
-								<div class="meterReadingField">
-									<label for="{{prefix}}kWh-{{counter}}" class="formLabel">kWhs</label>
-									<input id="{{prefix}}kWh-{{counter}}" name="{{prefix}}kWh-{{counter}}" type="text" class="formField">
-								</div>
-								<div class="meterReadingOccurrence">
-									<label for="{{prefix}}UseDuration" class="formLabel">Per</label>
-									<input name="{{prefix}}PerYear" type="text" class="formField" value="Per Year" disabled="disabled">
-								</div>
-								<a class="removeField link" data-{{prefix}}-field-remove="{{counter}}">
-									<span class="gbe-icon-minus"></span>
-								</a>
-							</div>
-						</script>
+                        <script id="addFieldTemplate" type="x-tmpl-mustache">
+                            <div class="meterReadingFields" data-{{prefix}}-input-count="{{counter}}">
+                                <div class="meterReadingField">
+                                    <label for="{{prefix}}kWh-{{counter}}" class="formLabel">kWhs</label>
+                                    <input id="{{prefix}}kWh-{{counter}}" name="{{prefix}}kWh-{{counter}}" type="text" class="formField">
+                                </div>
+                                <div class="meterReadingOccurrence">
+                                    <label for="{{prefix}}UseDuration" class="formLabel">Per</label>
+                                    <input name="{{prefix}}PerYear" type="text" class="formField" value="Per Year" disabled="disabled">
+                                </div>
+                                <a class="removeField link" data-{{prefix}}-field-remove="{{counter}}">
+                                    <span class="gbe-icon-minus"></span>
+                                </a>
+                            </div>
+                        </script>
 
-						<div class="companySubmitButtonContainer">
-							<button type="button" name="button" class="button inline">Contact Me</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</body>
+                        <div class="companySubmitButtonContainer">
+                            <button type="button" name="button" class="button inline">Contact Me</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
 </html>

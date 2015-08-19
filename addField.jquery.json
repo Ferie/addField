@@ -1,37 +1,37 @@
 {
-	"name": "addField",
-	"title": "addField jQuery plugin",
-	"description": "addField is a jQuery plugin that adds multiple fields in a form",
-	"keywords": [
-		"jquery-plugins",
-		"add field",
-		"multiple fields",
-		"clone field",
-		"add fields"
-	],
-	"version": "1.0",
-	"author": {
-		"name": "Riccardo Andreatta",
-		"url": "https://github.com/Ferie/addField"
-	},
-	"maintainers": [
-		{
-			"name": "Riccardo Andreatta",
-			"url": "https://github.com/Ferie"
-		}
-	],
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://www.opensource.org/licenses/mit-license.php"
-		}
-	],
-	"bugs": "https://github.com/Ferie/addField/issues",
-	"homepage": "http://riccardoandreatta.com/web-app/cssCollapse/example.html",
-	"docs": "https://github.com/Ferie/addField#readme",
-	"download": "https://github.com/Ferie/addField/archive/master.zip",
-	"dependencies": {
-		"jquery": ">=1.4",
-		"mustache.js": ">=v2.0.0"
-	}
+    "name": "addField",
+    "title": "addField jQuery plugin",
+    "description": "addField is a jQuery plugin that adds multiple fields in a form",
+    "keywords": [
+        "jquery-plugins",
+        "add field",
+        "multiple fields",
+        "clone field",
+        "add fields"
+    ],
+    "version": "1.0",
+    "author": {
+        "name": "Riccardo Andreatta",
+        "url": "https://github.com/Ferie/addField"
+    },
+    "maintainers": [
+        {
+            "name": "Riccardo Andreatta",
+            "url": "https://github.com/Ferie"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ],
+    "bugs": "https://github.com/Ferie/addField/issues",
+    "homepage": "http://riccardoandreatta.com/web-app/cssCollapse/example.html",
+    "docs": "https://github.com/Ferie/addField#readme",
+    "download": "https://github.com/Ferie/addField/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.4",
+        "mustache.js": ">=v2.0.0"
+    }
 }
