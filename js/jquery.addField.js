@@ -4,7 +4,7 @@
 
 	var pluginName = 'addField',
 		defaults = {
-			addFieldClass: '.addField'
+			addFieldLinkClass: '.addField'
 		};
 
 	//constructor
@@ -13,7 +13,7 @@
 		this.$elem = $(element);
 		this.options = $.extend({}, defaults, options);
 
-		this.$addField = this.$elem.find(this.options.addFieldClass);
+		this.$addField = this.$elem.find(this.options.addFieldLinkClass);
 		this.elecInputCount = 1;
 		this.gasInputCount = 1;
 
