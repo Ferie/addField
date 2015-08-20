@@ -27,7 +27,7 @@
         }
     ],
     "bugs": "https://github.com/Ferie/addField/issues",
-    "homepage": "http://riccardoandreatta.com/web-app/cssCollapse/example.html",
+    "homepage": "http://riccardoandreatta.com/web-app/addField/addFields-using-plugin-jquery.addField-and-Mustache-lib.html",
     "docs": "https://github.com/Ferie/addField#readme",
     "download": "https://github.com/Ferie/addField/archive/master.zip",
     "dependencies": {
