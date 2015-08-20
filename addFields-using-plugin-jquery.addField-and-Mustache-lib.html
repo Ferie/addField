@@ -33,7 +33,7 @@
                                         <div class="meterReadingFields">
                                             <div class="meterReadingField">
                                                 <label for="eleckWh-1" class="formLabel">kWhs</label>
-                                                <input id="eleckWh-1" name="eleckWh-1" type="text" class="formField" data-elec-input-count="1">
+                                                <input id="eleckWh-1" name="eleckWh-1" type="text" class="formField" data-elec-field-count="1">
                                             </div>
                                             <div class="meterReadingOccurrence">
                                                 <label for="elecUseDuration" class="formLabel">Per</label>
@@ -54,7 +54,7 @@
                                         <div class="meterReadingFields">
                                             <div class="meterReadingField">
                                                 <label for="gaskWh-1" class="formLabel">kWhs</label>
-                                                <input id="gaskWh-1" name="gaskWh-1" type="text" class="formField" data-gas-input-count="1">
+                                                <input id="gaskWh-1" name="gaskWh-1" type="text" class="formField" data-gas-field-count="1">
                                             </div>
                                             <div class="meterReadingOccurrence">
                                                 <label for="gasUseDuration" class="formLabel">Per</label>
@@ -73,7 +73,7 @@
                         </section>
 
                         <script id="addFieldTemplate" type="x-tmpl-mustache">
-                            <div class="meterReadingFields" data-{{prefix}}-input-count="{{counter}}">
+                            <div class="meterReadingFields" data-{{prefix}}-field-count="{{counter}}">
                                 <div class="meterReadingField">
                                     <label for="{{prefix}}kWh-{{counter}}" class="formLabel">kWhs</label>
                                     <input id="{{prefix}}kWh-{{counter}}" name="{{prefix}}kWh-{{counter}}" type="text" class="formField">
