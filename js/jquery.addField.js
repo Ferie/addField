@@ -72,7 +72,7 @@
 
             if (counter <= max_fields) {
 //				$wrapper.append('\
-//					<div class="meterReadingFields" data-' + prefix + '-input-count="' + counter + '">\
+//					<div class="meterReadingFields" data-' + prefix + '-field-count="' + counter + '">\
 //						<div class="meterReadingField">\
 //							<label for="' + prefix + 'kWh-' + counter + '" class="formLabel">kWhs</label>\
 //							<input id="' + prefix + 'kWh-' + counter + '" name="' + prefix + 'kWh-' + counter + '" type="text" class="formField">\
@@ -110,7 +110,7 @@
 
                 e.preventDefault();
                 e.stopPropagation();
-                $this.parent().remove();
+                $this.parents('[data-' + prefix + '-field-count="' + counter + '"]').remove();
 
                 if (prefix == pluginThis.options.firstPrefix) {
                     pluginThis.elecInputCount = pluginThis.elecInputCount - 1;
