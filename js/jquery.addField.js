@@ -36,8 +36,12 @@
         this.options = $.extend({}, defaults, options);
 
         this.$addField = this.$elem.find('.' + this.options.addFieldClass);
-        this.elecInputCount = 1;
-        this.gasInputCount = 1;
+        this.firstInputCount = 1;
+        this.secondInputCount = 1;
+        this.thirdInputCount = 1;
+        this.fourthInputCount = 1;
+        this.fifthInputCount = 1;
+        this.sixthInputCount = 1;
 
         this._defaults = defaults;
         this._name = pluginName;
@@ -61,13 +65,33 @@
             if ($thisParents.hasClass(pluginThis.options.firstMultipleFieldsContainerParentsClass)) {
                 $wrapper = $thisParents.find('.' + pluginThis.options.firstWrapperClass);
                 prefix = pluginThis.options.firstPrefix;
-                pluginThis.elecInputCount = pluginThis.elecInputCount + 1;
-                counter = pluginThis.elecInputCount;
+                pluginThis.firstInputCount = pluginThis.firstInputCount + 1;
+                counter = pluginThis.firstInputCount;
             } else if ($thisParents.hasClass(pluginThis.options.secondMultipleFieldsContainerParentsClass)) {
                 $wrapper = $thisParents.find('.' + pluginThis.options.secondWrapperClass);
                 prefix = pluginThis.options.secondPrefix;
-                pluginThis.gasInputCount = pluginThis.gasInputCount + 1;
-                counter = pluginThis.gasInputCount;
+                pluginThis.secondInputCount = pluginThis.secondInputCount + 1;
+                counter = pluginThis.secondInputCount;
+            } else if ($thisParents.hasClass(pluginThis.options.secondMultipleFieldsContainerParentsClass)) {
+                $wrapper = $thisParents.find('.' + pluginThis.options.secondWrapperClass);
+                prefix = pluginThis.options.secondPrefix;
+                pluginThis.thirdInputCount = pluginThis.thirdInputCount + 1;
+                counter = pluginThis.thirdInputCount;
+            } else if ($thisParents.hasClass(pluginThis.options.secondMultipleFieldsContainerParentsClass)) {
+                $wrapper = $thisParents.find('.' + pluginThis.options.secondWrapperClass);
+                prefix = pluginThis.options.secondPrefix;
+                pluginThis.fourthInputCount = pluginThis.fourthInputCount + 1;
+                counter = pluginThis.fourthInputCount;
+            } else if ($thisParents.hasClass(pluginThis.options.secondMultipleFieldsContainerParentsClass)) {
+                $wrapper = $thisParents.find('.' + pluginThis.options.secondWrapperClass);
+                prefix = pluginThis.options.secondPrefix;
+                pluginThis.fifthInputCount = pluginThis.fifthInputCount + 1;
+                counter = pluginThis.fifthInputCount;
+            } else if ($thisParents.hasClass(pluginThis.options.secondMultipleFieldsContainerParentsClass)) {
+                $wrapper = $thisParents.find('.' + pluginThis.options.secondWrapperClass);
+                prefix = pluginThis.options.secondPrefix;
+                pluginThis.sixthInputCount = pluginThis.sixthInputCount + 1;
+                counter = pluginThis.sixthInputCount;
             }
 
             if (counter <= max_fields) {
@@ -113,11 +137,23 @@
                 $this.parents('[data-' + prefix + '-field-count="' + counter + '"]').remove();
 
                 if (prefix == pluginThis.options.firstPrefix) {
-                    pluginThis.elecInputCount = pluginThis.elecInputCount - 1;
-                    counter = pluginThis.elecInputCount;
+                    pluginThis.firstInputCount = pluginThis.firstInputCount - 1;
+                    counter = pluginThis.firstInputCount;
                 } else if (prefix == pluginThis.options.secondPrefix) {
-                    pluginThis.gasInputCount = pluginThis.gasInputCount - 1;
-                    counter = pluginThis.gasInputCount;
+                    pluginThis.secondInputCount = pluginThis.secondInputCount - 1;
+                    counter = pluginThis.secondInputCount;
+                } else if (prefix == pluginThis.options.secondPrefix) {
+                    pluginThis.thirdInputCount = pluginThis.thirdInputCount - 1;
+                    counter = pluginThis.thirdInputCount;
+                } else if (prefix == pluginThis.options.secondPrefix) {
+                    pluginThis.fourthInputCount = pluginThis.fourthInputCount - 1;
+                    counter = pluginThis.fourthInputCount;
+                } else if (prefix == pluginThis.options.secondPrefix) {
+                    pluginThis.fifthInputCount = pluginThis.fifthInputCount - 1;
+                    counter = pluginThis.fifthInputCount;
+                } else if (prefix == pluginThis.options.secondPrefix) {
+                    pluginThis.sixthInputCount = pluginThis.sixthInputCount - 1;
+                    counter = pluginThis.sixthInputCount;
                 }
 
                 $wrapper.find('[data-' + prefix + '-field-remove="' + counter + '"]').removeClass('is-hidden');
