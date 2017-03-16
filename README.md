@@ -115,6 +115,6 @@ The template has to include also another data attribute for the wrapper that mus
 
 ---------
 
-##About Mustache.js##
+### About Mustache.js ###
 
 Mustache.js is a very useful library that implements the mustache template system in JavaScript. Follow [the official GitHub link for further details](https://github.com/janl/mustache.js/)
