@@ -1,8 +1,12 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1e5fd5c9-088f-4b6d-b3db-e0e5bdfbd9a3/deploy-status)](https://app.netlify.com/sites/addfield-jquery-plugin/deploys)
+
 # addField is a jQuery plugin that adds multiple fields in a form
 
 Facing the problem of **adding multiple fields dinamically in a form** for those who have to enter multiple informations, I have created this plugin.
 
 In this repo you can find 3 examples: *the first one* is the very simple solution that uses only jQuery; *the second one* is only to show how [Mustache.js](https://github.com/janl/mustache.js/) could help; *the third one* is the solution that uses the plugin I have developed with and without using Mustache.js.
+
+See the [examples in action](https://addfield-jquery-plugin.netlify.com/)
 
 ## First example
 
